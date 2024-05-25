@@ -1,0 +1,49 @@
+import { Link } from "react-router-dom";
+import { IoSearchOutline } from "react-icons/io5";
+import { FaBell } from "react-icons/fa";
+import { IoIosVideocam } from "react-icons/io";
+import { MdVideoLibrary } from "react-icons/md";
+
+
+const Header = () => {
+// form gönderilince çalışacak fonksiyon
+const handleSubmit = (e) => {
+  e.preventDefault(); // sayfanın yenilenmesini önler
+
+  //aratılacak metin
+const text = e.target[0].value;
+// metin boşsa fonksiyonu durdurur
+if(text.trim () === "") return;
+
+};
+
+  return (
+    <header className="  flex justify-between items-center p-4">
+
+      <Link className="flex items-center gap-2" to="/">
+      
+        <img className="w-[50px] " src="/public/youtube.png" alt="logo" />
+        <h1 className="text-2xl font-mono max-sm:hidden">Youtube</h1>
+        </Link>
+
+<form onSubmit={handleSubmit} className="group  flex border border-gray-400 rounded-[20px] overflow-hidden">
+  <input 
+  type="text"
+   placeholder="Ara..." 
+  className="bg-black text-white  py-2 px-5 outline-none rounded-l-[20px] focus:border-blue-500  group-hover:border border border-tranparent group-hover:border-blue-500 " />
+  <button className="px-4 text-2xl  bg-zinc-800 ">
+    <IoSearchOutline />
+    </button>
+</form>
+<div className="flex gap-3 text-xl cursor-pointer">
+<FaBell  className="hover:text-gray-400 transition duration-200"/>
+<IoIosVideocam className="hover:text-gray-400 transition duration-200"/>
+<MdVideoLibrary className="hover:text-gray-400 transition duration-200"/>
+</div>
+
+    </header>
+  )
+}
+
+export default Header;
+
