@@ -9,13 +9,13 @@ export const VideoContext = createContext();
 export const VideoProvider = ({ children }) => {
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
   const [videos, setVideos] = useState();
-  //console.log(selectedCategory.type);
+  //!console.log(selectedCategory.type);
 const[error, setError] = useState(null);
 const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const type = selectedCategory.type;
-    //console.log(type);
+    //!console.log(type);
 
     const url =
     type === "home"
@@ -32,7 +32,7 @@ const [isLoading, setIsLoading] = useState(true);
     .finally(()=> setIsLoading(false));
 
   }, [selectedCategory]);
-//console.log(videos)
+//!console.log(videos)
   return (
     <VideoContext.Provider value={{ 
       selectedCategory, 

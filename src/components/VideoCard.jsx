@@ -9,6 +9,10 @@ const[isHover, setIsHover] = useState(false);
 const navigate = useNavigate();
 //console.log(video); 
  return (
+
+
+
+  
     // <div>
     
     //   <div>
@@ -19,6 +23,10 @@ const navigate = useNavigate();
       
     //   </div>
     // </div>
+
+
+
+
     <div onClick={()=> navigate(`watch?v=${video?.videoId}`)} 
     className="cursor-pointer"
     onMouseEnter={()=>setIsHover(true)}
