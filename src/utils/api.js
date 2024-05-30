@@ -1,5 +1,5 @@
 import axios from "axios";
-
+// yapılan her istekte geçerli olmasını  istediğimiz ayarları tanımlaadıgımız bir axios örneği oluşturalım
 const api = axios.create({
     baseURL:import.meta.env.VITE_API_URL,
 

@@ -1,10 +1,14 @@
 import { useState } from "react"
 import millify from "millify";
+import { useNavigate } from "react-router-dom";
 
 const VideoCard = ({video}) => {
-const[isHover, setIsHover] = useState(true);
-console.log(video);
-  return (
+const[isHover, setIsHover] = useState(false);
+
+
+const navigate = useNavigate();
+//console.log(video); 
+ return (
     // <div>
     
     //   <div>
@@ -15,11 +19,16 @@ console.log(video);
       
     //   </div>
     // </div>
-    <div>
+    <div onClick={()=> navigate(`watch?v=${video?.videoId}`)} 
+    className="cursor-pointer"
+    onMouseEnter={()=>setIsHover(true)}
+    onMouseLeave={()=>setIsHover(false)}
+    >
  {/* resim alanı */}
-      <div>
-    <img className="w-full h-full rounded-lg" src={isHover &&  
-      video.thumbnail ? video.thumbnail[0].url : video.thumbnail[0].url}
+      <div >
+    <img className="w-full h-full rounded-lg" 
+    src={ isHover && 
+      video.richThumbnail ? video.richThumbnail[0].url : video.thumbnail[0].url}
        alt="resim" />
       <p>{video.title} </p>
       
@@ -46,4 +55,4 @@ alt="hata" />
   );
 };
 
-export default VideoCard
+export default VideoCard;

@@ -16,7 +16,8 @@ const Feed = () => {
 <p>Yükleniyor...</p>
 ) : error ? 
 <p>error</p> : ( 
-videos?.map((item)=> item.type === "video" && <VideoCard video={item} key={item.videoId}/> )
+videos?.map((item)=> item.type === "video" &&
+ (<VideoCard video={item} key={item.videoId}/>) )
 
 )}
 </div>

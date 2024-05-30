@@ -6,7 +6,7 @@
 body{
     background-color: black;
     color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .videos{
