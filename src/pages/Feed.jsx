@@ -6,11 +6,11 @@ import VideoCard from "../components/VideoCard";
 
 const Feed = () => {
  const {videos, isLoading, error} = useContext(VideoContext);
- console.log(videos);
+ //console.log(videos);
   return (
     <div className="flex">
      <SideBar />
-<div >
+<div className="videos">
 
 { isLoading ? (
 <p>Yükleniyor...</p>

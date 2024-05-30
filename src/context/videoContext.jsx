@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { categories } from "../constants";
 import api from "../utils/api";
 
+
 // context in temelini createContext ile oluşturduk
 export const VideoContext = createContext();
 
