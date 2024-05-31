@@ -24,7 +24,7 @@ useEffect(() => {
 api.get(`/video/info?id=${id}&extend=1`).then((res)=> setVideo(res.data));
 api.get(`/comments?id=${id}`).then((res)=> setComments(res.data));
 },[id]);
-console.log(video);
+//! console.log(video);
   return (
     <div className="detail-page h-screen overflow-auto">
 <div>
@@ -45,9 +45,9 @@ console.log(video);
   {/* Kanal Bilgileri */}
   <ChannelInfo video={video}  />
   {/* video Bilgileri */}
-  <VideoInfo/>
+  <VideoInfo video={video} />
   {/* yorumlar */}
-  <Comments/>
+  <Comments data={comments} />
   </>
 )}
 

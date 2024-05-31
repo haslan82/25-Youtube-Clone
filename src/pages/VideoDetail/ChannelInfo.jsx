@@ -1,8 +1,8 @@
 import { AiFillLike, AiFillDislike } from "react-icons/ai";
 
 
-const ChannelInfo = (video) => {
-  console.log(video);
+const ChannelInfo = ({video}) => {
+  //! console.log(video);
   return (
     <div className="flex justify-center">
      {/* sol */}
@@ -10,7 +10,8 @@ const ChannelInfo = (video) => {
       <img 
 
       //! alt satırı unutma veri tabanından veri gelince düzelt
-      //src={video?.channelThumbnail[0].url} 
+      src={video?.channelThumbnail[0].url} 
+  
       className="rounded-full w-12 h-12" 
       /> 
       <div>

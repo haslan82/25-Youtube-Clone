@@ -3,7 +3,7 @@ import millify from "millify";
 import { useNavigate } from "react-router-dom";
 
 const VideoCard = ({video, isRow}) => {
-  console.log(isRow);
+  //! console.log(isRow);
 const[isHover, setIsHover] = useState(false);
 
 
