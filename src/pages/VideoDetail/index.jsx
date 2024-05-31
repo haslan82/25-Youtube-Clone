@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import api from "../../utils/api";
+import ReactPlayer from 'react-player'
+import ChannelInfo from "./ChannelInfo";
+import VideoInfo from "./VideoInfo";
+import Comments from "./Comments";
+import VideoCard from "../../components/VideoCard";
+
 
 
 const VideoDetail = () => {
@@ -15,11 +21,47 @@ const [comments, setComments] = useState(null);
   //!console.log(id);
   //id si bilinen videonun bilgilerini api den al
 useEffect(() => {
-api.get(`/video/info?id=${id}`).then((res)=> setVideo(res.data));
+api.get(`/video/info?id=${id}&extend=1`).then((res)=> setVideo(res.data));
 api.get(`/comments?id=${id}`).then((res)=> setComments(res.data));
 },[id]);
-//!console.log(video);
-  return <div>video detaylars</div>;
+console.log(video);
+  return (
+    <div className="detail-page h-screen overflow-auto">
+<div>
+      {/* video içeriği */}
+     <div className="h-[50vh] lg:h-[60vh] rounded-md overflow-hidden ">
+     <ReactPlayer 
+     width={"100%"}
+     height={"100%"}
+      controls url={`https://www.youtube.com/watch?v=${id} `} 
+      />
+     </div>
+
+{!video && <p>yükleniyor</p>}
+{video && (
+  <>
+  {/* Başlık bilgileri */}
+  <h1 className="my-3 text-xl font-bold">{video.title} </h1>
+  {/* Kanal Bilgileri */}
+  <ChannelInfo video={video}  />
+  {/* video Bilgileri */}
+  <VideoInfo/>
+  {/* yorumlar */}
+  <Comments/>
+  </>
+)}
+
+</div>
+<div className="d-flex flex-col gap-5 p-1">
+  {video?.relatedVideos.data.map(
+    (item) => 
+    item.type === "video" && (
+    <VideoCard key={item.videoId} video={item} isRow={true} />
+  )
+   )}
+</div>
+</div>
+  );
  
 };
 
