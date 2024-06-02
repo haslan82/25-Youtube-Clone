@@ -27,13 +27,14 @@ api.get(`/comments?id=${id}`).then((res)=> setComments(res.data));
 //! console.log(video);
   return (
     <div className="detail-page h-screen overflow-auto">
-<div>
+
       {/* video içeriği */}
      <div className="h-[50vh] lg:h-[60vh] rounded-md overflow-hidden ">
-     <ReactPlayer 
+     <ReactPlayer
+      controls
      width={"100%"}
      height={"100%"}
-      controls url={`https://www.youtube.com/watch?v=${id} `} 
+       url={`https://www.youtube.com/watch?v=${id} `} 
       />
      </div>
 
@@ -51,7 +52,7 @@ api.get(`/comments?id=${id}`).then((res)=> setComments(res.data));
   </>
 )}
 
-</div>
+
 <div className="d-flex flex-col gap-5 p-1">
   {video?.relatedVideos.data.map(
     (item) => 

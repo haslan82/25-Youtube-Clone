@@ -48,9 +48,18 @@ body{
     }
 }
 
-.row{
+.row {
     display: grid;
     grid-template-columns:140px auto;
     align-items: center;
     gap: 20px;
 }
+
+
+.row .c-pic{
+    display: none;
+}
+.row .text{
+    display: none;
+}
+

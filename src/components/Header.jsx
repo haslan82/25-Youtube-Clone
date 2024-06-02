@@ -1,11 +1,14 @@
-import { Link } from "react-router-dom";
-import { IoSearchOutline } from "react-icons/io5";
+import { Link, useNavigate } from "react-router-dom";
+import { CiSearch } from "react-icons/ci";
 import { FaBell } from "react-icons/fa";
 import { IoIosVideocam } from "react-icons/io";
 import { MdVideoLibrary } from "react-icons/md";
 
 
 const Header = () => {
+
+const navigate = useNavigate();
+
 // form gönderilince çalışacak fonksiyon
 const handleSubmit = (e) => {
   e.preventDefault(); // sayfanın yenilenmesini önler
@@ -14,6 +17,8 @@ const handleSubmit = (e) => {
 const text = e.target[0].value;
 // metin boşsa fonksiyonu durdurur
 if(text.trim () === "") return;
+
+navigate(`/results?search_query=${text}` );
 
 };
 
@@ -32,7 +37,7 @@ if(text.trim () === "") return;
    placeholder="Ara..." 
   className="bg-black text-white  py-2 px-5 outline-none rounded-l-[20px] focus:border-blue-500  group-hover:border border border-tranparent group-hover:border-blue-500 " />
   <button className="px-4 text-2xl  bg-zinc-800 ">
-    <IoSearchOutline />
+    <CiSearch />
     </button>
 </form>
 <div className="flex gap-3 text-xl cursor-pointer">
