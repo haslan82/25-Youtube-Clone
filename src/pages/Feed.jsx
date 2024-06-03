@@ -2,6 +2,7 @@ import { useContext } from "react";
 import SideBar from "../components/SideBar";
 import { VideoContext } from "../context/videoContext";
 import VideoCard from "../components/VideoCard";
+import Loader from "../components/Loader";
 
 
 const Feed = () => {
@@ -12,8 +13,8 @@ const Feed = () => {
      <SideBar />
 <div className="videos">
 
-{ isLoading ? (
-<p>Yükleniyor...</p>
+{isLoading ? (
+<Loader/>
 ) : error ? 
 <p>error</p> : ( 
 videos?.map((item)=> item.type === "video" &&

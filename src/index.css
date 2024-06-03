@@ -2,64 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body{
-    background-color: black;
-    color: white;
-    overflow: hidden;
+body {
+  background-color: black;
+  color: white;
+  overflow: hidden;
 }
-
-.videos{
- 
-    width: 100%;
-    display: grid;
-    overflow: auto;
-    padding: 20px;
-    gap: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+.videos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 20px;
+  gap: 50px;
 }
-.videos::-webkit-scrollbar{
-  width: 8px;  
-  border-radius: 5px;
+.videos::-webkit-scrollbar {
   background: transparent;
+  width: 8px;
+  border-radius: 5px;
 }
-.videos::-webkit-scrollbar-thumb{
-    background: #818080;
+.videos::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
 }
 
 /* detay sayfası */
-
-.detail-page{
-    display: grid;
-    gap: 40px;
-    grid-template-columns: auto 400px;
-    padding: 40px 60px;
+.detail-page {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: auto 400px;
+  padding: 40px 60px;
 }
-@media(min-width:1400px){
-    .detail-page{
-        padding: 40px 100px;
-    }
+@media (min-width: 1400px) {
+  .detail-page {
+    padding: 40px 100px;
+  }
 }
-
-@media (max-width:1000px){
-    .detail-page{
-        grid-template-columns: 1fr;
-        padding: 40px 20px;
-    }
+@media (max-width: 1000px) {
+  .detail-page {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
 }
 
 .row {
-    display: grid;
-    grid-template-columns:140px auto;
-    align-items: center;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 140px auto;
+  align-items: center;
+  gap: 20px;
+}
+.row .c-pic {
+  display: none;
+}
+.row .text {
+  display: none;
 }
 
-
-.row .c-pic{
-    display: none;
+*::-webkit-scrollbar {
+  background: transparent;
+  width: 10px;
 }
-.row .text{
-    display: none;
+*::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
 }
 
