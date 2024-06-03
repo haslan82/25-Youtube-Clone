@@ -27,7 +27,7 @@ api.get(`/comments?id=${id}`).then((res)=> setComments(res.data));
 //! console.log(video);
   return (
     <div className="detail-page h-screen overflow-auto">
-
+<div>
       {/* video içeriği */}
      <div className="h-[50vh] lg:h-[60vh] rounded-md overflow-hidden ">
      <ReactPlayer
@@ -52,7 +52,7 @@ api.get(`/comments?id=${id}`).then((res)=> setComments(res.data));
   </>
 )}
 
-
+</div>
 <div className="d-flex flex-col gap-5 p-1">
   {video?.relatedVideos.data.map(
     (item) => 
