@@ -1,3 +1,48 @@
+# Youtube TR Clone Project
+
+## I cloned Youtube Turkey using HTML5, CSS3, React and API. The page allows users to view videos based on category selection and shows previews when hovering over the videos. It can also fetch videos based on the text typed in the search bar. Details such as comments, number of likes, channel information and publication date can be viewed under each video. This project, in which I recreated the YouTube experience in Turkey in an original and interactive way, provides users with easier and faster access to video content
+
+
+## The following technologies were used in the frontend development phase of my site:
+
+## HTML5, CSS3, React, API
+
+## ![](/gif.gif)
+
+## # Designed by <a href="https://www.linkedin.com/in/h%C3%BCseyin-aslan-128519203/" target="_blank">Hüseyin ASLAN</a> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
