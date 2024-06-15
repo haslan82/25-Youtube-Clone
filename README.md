@@ -41,7 +41,7 @@
 
 
 
-
+<!-- 
 
 # React + Vite
 
@@ -70,4 +70,4 @@ Currently, two official plugins are available:
 
 ## Enviroment Variables (Ortam Değişkenler)
 
-- Çalışma ortamı için gerekli olan ama projeyi githuba gönderdiğimiz zaman herkes tarafından erişilebilir olmasını istemediğimiz değişkenleri ortam değişkenleri olarak tanımlarız.  Çalışma dizininde genel kısma .env diye klasor açarak tanımlarız
+- Çalışma ortamı için gerekli olan ama projeyi githuba gönderdiğimiz zaman herkes tarafından erişilebilir olmasını istemediğimiz değişkenleri ortam değişkenleri olarak tanımlarız.  Çalışma dizininde genel kısma .env diye klasor açarak tanımlarız -->
